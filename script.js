@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${platformName}</td>
             <td>${startDate}</td>
             <td>${endDate}</td>
-            <td>${flags}</td>
-            <td>${notes}</td>
+            <td contenteditable="true">${flags}</td>
+            <td contenteditable="true">${notes}</td>
             <td><button onclick="completeCampaign(this)">Complete</button></td>
         `;
 
