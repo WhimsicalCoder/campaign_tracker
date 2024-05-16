@@ -7,9 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Campaign Tracker</h1>
-        <table id="campaignTable">
+    <h1>Campaign Tracker</h1>
+    <button id="toggle-form-btn">Add Campaign</button>
+    <div class="form-container" id="form-container" style="display: none;">
+        <form id="campaign-form">
+            <input type="text" id="campaign-name" placeholder="Campaign Name" required>
+            <input type="text" id="platform-name" placeholder="Platform Name" required>
+            <input type="date" id="start-date" required>
+            <input type="date" id="end-date" required>
+            <input type="text" id="flags" placeholder="Flags">
+            <input type="text" id="notes" placeholder="Notes">
+            <button type="submit">Add Campaign</button>
+        </form>
+    </div>
+    <div class="table-container">
+        <table>
             <thead>
                 <tr>
                     <th>Campaign Name</th>
@@ -21,8 +33,8 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- Rows will be added here by JavaScript -->
+            <tbody id="campaign-table-body">
+                <!-- Campaign rows will be added here dynamically -->
             </tbody>
         </table>
     </div>
